@@ -8,10 +8,12 @@ import {connect} from 'react-redux';
 class Dashboard extends Component{
     render(){
         console.log(this.props)
+
+        const {projects}=this.props;
         return(
             <div className="dashboard">
                 <div className="row">
-                    <div className="ProjectList"><ProjectList/></div>
+                    <div className="ProjectList"><ProjectList projects={projects}/></div>
                     <div className="NotificationList"><Notification/></div>
                 </div>
             </div>
